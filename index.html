@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-box {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <div id="fact" class="fact-box">Click the button to see a fun fact!</div>
+        <button onclick="generateFact()">Generate Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "One Piece is a Japanese manga series written and illustrated by Eiichiro Oda.",
+            "The series first began serialization in Shueisha's Weekly Shōnen Jump magazine on July 22, 1997.",
+            "One Piece follows the adventures of Monkey D. Luffy, a young pirate with the ability to stretch his body like rubber after eating a Devil Fruit.",
+            "Luffy's goal is to find the legendary treasure known as the 'One Piece' and become the Pirate King.",
+            "The series has been adapted into an anime television series produced by Toei Animation, which began broadcasting in Japan in 1999.",
+            "One Piece has set the Guinness World Record for the most copies published for the same comic book series by a single author.",
+            "The world of One Piece is populated by pirates, marines, and various other factions, each with their own unique abilities and powers.",
+            "The series is known for its rich world-building, complex characters, and intricate plotlines.",
+            "As of 2023, One Piece has over 1000 episodes and continues to be one of the most popular anime and manga series worldwide.",
+            "The Straw Hat Pirates, led by Luffy, are the main protagonists of the series, each with their own dreams and goals."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
