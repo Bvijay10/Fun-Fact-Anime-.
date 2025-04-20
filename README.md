@@ -1,2 +1,2 @@
 # Fun-Fact-Anime-.
-This repo hosts sample code for GENAI 101 with pieces workshop
+This  is a simple fun fact generater , to make it fun i have used anime theme 
